@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>라이엇 계정 생성</title>
+<style>
+	table{
+		width : 70%;
+		
+	}
+	h2{
+		text-align : center;
+	
+	}
+	h5{
+		text-align : center;
+	
+	}
+	select{
+		required : "required";
+	}
+</style>
+</head>
+<body>
+
+<!-- 사용자의 입력을 받아들이는 공간  -->
+<!-- form 엔터 치면 바로 나오는데 필수성때문이다. -->
+<!-- 사용자가 form 태그에 입력한 값들을 어떤 페이지로 전달할지를 작성 -->
+<!-- method
+get = URL에 사용자의 요청정보를 오픈(디폴트값) 
+post = URL에 사용자의 요청정보를 공개하지않음 -->
+
+<form action="NewFile5.html" >
+	<!-- type 작성하고 대기하면 어떤것들을 작성할수있는지 뜬다 -->
+	<!-- placeholder 사용자에게 안내를 해줌 -->
+	<!-- required : 이걸 쓰지 않으면 다음으로 넘어가지 못하게끔 막아줌 -->
+	<h2>League of Legends</h2>
+	<h5>140여명의 챔피언중 하나를 선택해 화려한 플레이를 펼치며
+	적을 처치하고 포탑을 파괴해 승리를 쟁취하세요.</h5>
+	<h5>알고 계셨나요 ?</h5>
+	<h5>티모의 키는 107cm로 요들에서도 큰편에 속합니다.</h5>
+	
+	
+	<p style = "font-size : 13px">아이디 : <input type = "text" placeholder ="아이디" required = "required"> </p>
+	<p style = "font-size : 13px">비밀번호 : <input type = "password" minlength = "4" maxlength = "12" placeholder = "4글자 이상, 12글자 이하" required = "required"> </p>
+	
+	<!-- readonly : 이미 들어가있는 값의 변경을 막는다.  -->
+	<!-- email : @가 반드시 들어가야함  -->
+	<p style = "font-size : 13px">이메일 : <input type = "email" required = "required" > </p>
+	<p style = "font-size : 10px">※ 등록하신 이메일로 인증메일을 보내드립니다.</p>
+	-----------------------------
+	<br>
+	<!-- radio : 남자이면서 여자일순 없다 = 양자택일 -->
+	<!-- checked = 안하고 넘어갈수도있어서 미리 남쪽에 체크해놓은채로 두는것 -->
+	<p style = "font-size : 13px">성별 <br>
+	<p style = "font-size : 13px">남<input type = "radio" name = "gender" checked = "checked"> 여<input type = "radio" name = "gender"> </p>
+	-------------------------------
+	<br>
+	<p style = "font-size: 13px"> 플레이하는 게임 </p>
+	<p style = "font-size : 10px">리그오브레전드(LOL)<input type = "checkbox" checked = "checked"> 전략적 팀 전투(TFT)<input type = "checkbox"> 발로란트<input type = "checkbox"> <br>
+	<br> 리그오브레전드 : 와일드 리프트(Wildlift)<input type = "checkbox"> 레전드 오브 룬테라 <input type = "checkbox"></p>
+	<p style = "font-size : 12px">가입경로 : <select>
+	<option>광고</option>
+	<option>웹 사이트 검색</option>
+	<option>지인 추천</option>
+	<option>SNS</option>
+	<option>유튜브</option>
+	</select></p>
+	<!-- submit = form을 action의 위치로 보내줄수있음 -->
+	<!-- button = 사용자가 기능을 커스터마이징 할수있음  -->
+	<input type = "submit" value = "확인">
+	<!-- disabled 버튼을 누를수 없게됨, 즉 가능하지 않게됨 -->
+	
+	<!-- URL에 사용자의 요청정보가 들어가있다 // NewFile5.html?gender =... 이런식  -->
+</form>
+
+
+</body>
+</html>
